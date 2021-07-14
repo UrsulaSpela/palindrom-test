@@ -1,5 +1,5 @@
 //get input value
-let x = document.getElementById('input');
+let x = document.querySelector('input');
 let y;
 //reverse input
 
