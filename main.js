@@ -1,17 +1,17 @@
-//get input value
-let x = document.querySelector('input');
-let y;
-//reverse input
+let word = document.getElementById('input').value;
+const btn = document.querySelector('#btn')
 
-function reverseInput(){
-    return y === x.split().reverse().join();
-}
+
 //compare input with reverse input
 function palindromeTest(){
-    const xVal = x.value.trim();
- if(x === y){
-     alert('This is a palindrome!');
- } else{
-     alert('This is not a palindrome!')
+    // word.split('')
+    for(let i = 0; i < word.length; i++){
+        if(word[i] === word[word.length - 1 - i]){
+            console.log("Its a palindrome!")
+        }else if(word[i] !== word[word.length - 1 - i]){
+            console.log('Its not a palindrome')
+        }
  }
 }
+
+btn.addEventListener('click', palindromeTest)
